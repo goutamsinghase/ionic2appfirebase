@@ -1,0 +1,19 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar class="header-bar-grey">
+      <ion-title>Menu Home</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button menuClose ion-item>
+        Home
+      </button>
+      <button ion-item (click)="logout()">
+        Logout
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav id="nav" #content [root]="rootPage" swipeBackEnabled="false"></ion-nav>

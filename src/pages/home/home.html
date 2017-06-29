@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar class="header-bar-grey">
+    <ion-buttons left>
+      <button ion-button menuToggle>
+          <!-- Advanced: explicity set the icon for each platform -->
+          <ion-icon ios="ios-menu" md="md-menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title center>HOME</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-input type="text" placeholder="Share Your Thought" [(ngModel)]="message"></ion-input>
+    </ion-item>
+    <button ion-button block class="log-in-btn" (click)="writeNewPost()">Post</button>
+  </ion-list>
+  <button ion-button block class="log-in-btn"  (click)="loadPosts()">View Posts</button>
+  <ion-list *ngFor="let key of keys">
+      <ion-card>
+    <ion-card-content>
+      <ion-card-title>
+        {{posts[key].author}}
+      </ion-card-title>
+      <p>
+        {{posts[key].message}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+  </ion-list>
+
+</ion-content>
