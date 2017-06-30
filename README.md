@@ -15,3 +15,11 @@ $ ionic serve
 2. Logout
 3. Post your thoughts like twitter
 4. View posts all from all users
+
+### Node and Ionic version
+
+```bash
+$ npm -v  --> 5.0.4
+$ node -v  --> 6.10.0
+$ ionic -v  --> 3.4.0
+```
