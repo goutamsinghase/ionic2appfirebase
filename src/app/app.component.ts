@@ -52,10 +52,14 @@ export class MyApp {
       .then(function() {
               // Sign-out successful.
               console.log('sucess');
-              this.nav.setRoot(Login);
+              
         }, function(error) {
               // An error happened.
         });
+    this.zone = new NgZone({});
+    this.zone.run( () => {
+        this.nav.setRoot(Login);
+    });
   }
 }
 

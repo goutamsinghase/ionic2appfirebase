@@ -12,7 +12,7 @@
 <ion-content padding>
   <ion-list>
     <ion-item>
-      <ion-input type="text" placeholder="Share Your Thought" [(ngModel)]="message"></ion-input>
+      <ion-textarea rows="6" placeholder="Share Your Thought" [(ngModel)]="message" maxlength="140"></ion-textarea>
     </ion-item>
     <button ion-button block class="log-in-btn" (click)="writeNewPost()">Post</button>
   </ion-list>
